@@ -17,7 +17,7 @@
 > $\qquad\qquad$  计算样本 $x_j$ 与均值向量点的距离 $d_ij$ <br />
 > $\qquad\qquad$  根据距离最近的均值向量确定 $x_j$ 的簇标记 a <br />
 > $\qquad\qquad$  将样本&x_j&放入相应的簇 $C_a$ <br />
-> $\qquad$  **end for**
+> $\qquad$  **end for**<br />
 > $\qquad$  **for** i = 1, 2, ..., k **do** <br />
 > $\qquad\qquad$  计算新的均值向量 $w$ <br />
 > $\qquad\qquad$  **if** w!= $w_i$ <br />
@@ -29,6 +29,11 @@
 > **until**当前均值向量不更新<br />
 > **输出**：当前聚类划分结果C={ $C_1$ , $C_2$ , $C_3$ }<br />
 ## 层次聚类 — Agnes(AGglomerative NESting)<br />
+定义：它先将数据集的每个样本看作是一个初始簇，然后在算法中运行的每一步找出**距离最近**的两个簇进行合并，该过程持续进行，知道达到预设的聚类簇的个数<br />
+算法在进行簇与簇的距离计算有多种方法，在这里我才用的是**平均链接方法**(即计算簇内所有点距离和的平均值)<br />
+> **输入**：样本集D={ $x_1$ , $x_2$ ,..., $x_n$ }、聚类簇数k和聚类簇距离函数d<br />
+> **过程**：<br />
+
 ## 模型聚类 — GMM(Gaussian Mixture Model)<br />
 ## 密度聚类 — DBSCAN(Density-Based Spatial Clustering of Applications with Noise)<br />
 ---
