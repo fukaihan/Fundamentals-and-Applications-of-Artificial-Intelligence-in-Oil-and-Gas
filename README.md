@@ -10,7 +10,7 @@
 - 对于不同数据集是否可以更换**距离**的定义？<br />
 > **输入**：样本集D={ $x_1$ , $x_2$ ,..., $x_n$ }和聚类簇数k<br />
 > **过程**：<br />
-> 从D中随机选取k个样本作为初始均值向量{ &w_1& , &w_2& ,..., &w_k&}<br />
+> 从D中随机选取k个样本作为初始均值向量{ $w_1$ , $w_2$ ,..., $w_k$}<br />
 > **repeat**<br />
 > $\qquad$ 令 $C_i$ = $\emptyset$ (i $\leq$ k) <br />
 > $\qquad$ **for** j = 1, 2, ..., m **do** <br />
@@ -33,7 +33,22 @@
 算法在进行簇与簇的距离计算有多种方法，在这里我才用的是**平均链接方法**(即计算簇内所有点距离和的平均值)<br />
 > **输入**：样本集D={ $x_1$ , $x_2$ ,..., $x_n$ }、聚类簇数k和聚类簇距离函数d<br />
 > **过程**：<br />
-
+> **for**j = 1, 2,..., m **do** <br />
+> $\qquad$ $C_j$ = { $x_j$ } <br />
+> **end for**
+> **for** i = 1, 2,..., m **do** <br />
+> $\qquad$ **for**j = 1, 2,...,m **do** <br />
+> $\qquad\qquad$ $M(i,j)$ =d( $C_i$ , $C_j$ ) <br />
+> $\qquad\qquad$ $M(j,i)$ = $M(i,j)$ <br />
+> $\qquad$ **end for** <br />
+> **end for** <br />
+> 设置当前聚类簇个数：q=m <br />
+> **while** q > k **do** <br />
+> $\qquad$ 找出距离最近的两个簇并合并 <br />
+> $\qquad$ 更新原来的簇的距离矩阵以及序号 <br />
+> $\qquad$ q = q - 1 <br />
+> **end while** <br />
+> **输出**：当前聚类划分结果C={ $C_1$ , $C_2$ , $C_3$ }<br />
 ## 模型聚类 — GMM(Gaussian Mixture Model)<br />
 ## 密度聚类 — DBSCAN(Density-Based Spatial Clustering of Applications with Noise)<br />
 ---
