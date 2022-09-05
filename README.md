@@ -51,4 +51,5 @@
 > **输出**：当前聚类划分结果C={ $C_1$ , $C_2$ , $C_3$ }<br />
 ## 模型聚类 — GMM(Gaussian Mixture Model)<br />
 ## 密度聚类 — DBSCAN(Density-Based Spatial Clustering of Applications with Noise)<br />
+定义：密度聚类算法从样本的密度角度来考虑样本之间的可连接性，并给予可连接样本不断拓展其聚类簇的大小并最终获得结果，DBSCAN算法不需要提前设定聚类数k，其通过“邻域参数”( $\epsilon$ , $MinPts$)来刻画样本分布的紧密程度<br />
 ---
