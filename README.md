@@ -51,5 +51,19 @@
 > **输出**：当前聚类划分结果C={ $C_1$ , $C_2$ , $C_3$ }<br />
 ## 模型聚类 — GMM(Gaussian Mixture Model)<br />
 ## 密度聚类 — DBSCAN(Density-Based Spatial Clustering of Applications with Noise)<br />
-定义：密度聚类算法从样本的密度角度来考虑样本之间的可连接性，并给予可连接样本不断拓展其聚类簇的大小并最终获得结果，DBSCAN算法不需要提前设定聚类数k，其通过“邻域参数”( $\epsilon$ , $MinPts$)来刻画样本分布的紧密程度<br />
+定义：密度聚类算法从样本的密度角度来考虑样本之间的可连接性，并给予可连接样本不断拓展其聚类簇的大小并最终获得结果，DBSCAN算法不需要提前设定聚类数k，其通过“邻域参数”( $\epsilon$ , $MinPts$ )来刻画样本分布的紧密程度<br />
+虽然该算法可以自己依照密度进行划分聚类，对于复杂样本(比如作业里的鸢尾花样本)，其参数是很难确定的，因此DBSCAN算法也是我在四个算法中效果最差的.<br />
+> **输入**：样本集D={ $x_1$ , $x_2$ ,..., $x_n$ }和邻域参数( $\epsilon$ , $MinPts$ ) <br />
+> **过程**：<br />
+> 初始化核心对象集合 $coreset$ <br />
+> **for** j = 1, 2,..., m **do** <br />
+> $\qquad$ 确定样本 $x_j$ 的邻域 $N$ ( $x_j$ ) <br />
+> $\qquad$ **if**邻域中样本个数 $\geq$ $MinPts$ **then** <br />
+> $\qquad\qquad$ 将样本$x_j$加入核心对象集合 $coreset$ <br />
+> $\qquad$ **end if** <br />
+> **end for** <br />
+> 初始化聚类簇数：k=0 <br />
+> 初始化未访问样本集合：T=D <br />
+> **while** $coreset$ != 
+
 ---
