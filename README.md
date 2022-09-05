@@ -50,6 +50,26 @@
 > **end while** <br />
 > **输出**：当前聚类划分结果C={ $C_1$ , $C_2$ , $C_3$ }<br />
 ## 模型聚类 — GMM(Gaussian Mixture Model)<br />
+定义：涉及**EM**算法以及**多维高斯分布**，算法原理还没太搞懂.<br />
+> **输入**：样本集D={ $x_1$ , $x_2$ ,..., $x_n$ }和高斯混合成分个数k. <br />
+> **过程**：<br />
+> 初始化高斯混合的模型参数 <br />
+> **repeat** <br />
+> $\qquad$ **for** j = 1, 2,..., m **do** <br />
+> $\qquad\qquad$ 计算 $x$ 由各混合成分生成的后验概率 <br />
+> $\qquad$ **end for** <br />
+> $\qquad$ **for** i = 1, 2,..., k **do** <br />
+> $\qquad\qquad$ 计算新的**均值向量**. <br />
+> $\qquad\qquad$ 计算新的**协方差矩阵**. <br />
+> $\qquad\qquad$ 计算新的**混合系数**. <br />
+> $\qquad$ **end for** <br />
+> $\qquad$ 更新模型参数 <br />
+> **until**满足停止条件 <br />
+> $C_i$ = $\emptyset$ <br />
+> **for** j =1, 2,...,m **do** <br />
+> $\qquad$ 确定簇种类以及标记，更新簇. <br />
+> **end for** <br />
+> **输出**：当前聚类划分结果C={ $C_1$ , $C_2$ , $C_3$ }<br />
 ## 密度聚类 — DBSCAN(Density-Based Spatial Clustering of Applications with Noise)<br />
 定义：密度聚类算法从样本的密度角度来考虑样本之间的可连接性，并给予可连接样本不断拓展其聚类簇的大小并最终获得结果，DBSCAN算法不需要提前设定聚类数k，其通过“邻域参数”( $\epsilon$ , $MinPts$ )来刻画样本分布的紧密程度<br />
 虽然该算法可以自己依照密度进行划分聚类，对于复杂样本(比如作业里的鸢尾花样本)，其参数是很难确定的，因此DBSCAN算法也是我在四个算法中效果最差的.<br />
