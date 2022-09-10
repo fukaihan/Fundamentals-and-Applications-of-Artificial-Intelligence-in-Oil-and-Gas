@@ -11,5 +11,6 @@
 定义：涉及**EM**算法以及**多维高斯分布**，算法原理还没太搞懂.<br />
 ## 密度聚类 — DBSCAN(Density-Based Spatial Clustering of Applications with Noise)<br />
 定义：密度聚类算法从样本的密度角度来考虑样本之间的可连接性，并给予可连接样本不断拓展其聚类簇的大小并最终获得结果，DBSCAN算法不需要提前设定聚类数k，其通过“邻域参数”( $\epsilon$ , $MinPts$ )来刻画样本分布的紧密程度<br />
+
 ---
 # 特征提取算法<br />
