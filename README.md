@@ -22,3 +22,19 @@
 定义：<br />
 
 ---
+# 常用的分类方法<br />
+## K近邻方法 — K-nearest-neighbor<br />
+定义：KNN(K-nearest-neighbor)<br />
+## 朴素贝叶斯<br />
+定义：<br />
+## 逻辑回归<br />
+定义：<br />
+
+---
+# 集成学习算法<br />
+## Bagging集成学习算法 - 随机森林<br />
+定义：<br />
+## Boosting集成学习算法<br />
+定义：<br />
+
+---
