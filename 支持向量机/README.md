@@ -190,9 +190,9 @@ $$
 
 $$
 \begin{cases}
-\frac{\partial L}{\partial \omega}=0,\frac{\partial L}{\partial b}=0 ,\frac{\partial L}{\partial \lambda}=0\\[2ex]
-\lambda_i(1-y_i(\omega^Tx_i+b))=0\\[2ex]
-\lambda_i \geq 0 \\[2ex]
+\frac{\partial L}{\partial \omega}=0,\frac{\partial L}{\partial b}=0 ,\frac{\partial L}{\partial \lambda}=0\\
+\lambda_i(1-y_i(\omega^Tx_i+b))=0\\
+\lambda_i \geq 0 \\
 1-y_i(\omega^Tx_i+b) \leq 0
 \end{cases}
 $$
@@ -201,7 +201,7 @@ $$
 
 $$
 \begin{cases}
-\omega^*=\sum_{i=0}^{N}\lambda_iy_ix_i\\[2ex]
+\omega^*=\sum_{i=0}^{N}\lambda_iy_ix_i\\
 b^*=y_k-\sum_{i=0}^{N}\lambda_iy_ix_i^Tx_k
 \end{cases}
 $$
