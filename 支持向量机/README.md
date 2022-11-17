@@ -30,7 +30,7 @@ $$
 
 $$
 \begin{cases}
-\omega ^ T x_i+b >0,y_i=1 \\[2ex]
+\omega ^ T x_i+b >0,y_i=1 \\
 \omega ^ T x_i+b <0, y_i=-1
 \end{cases}
 $$
@@ -43,7 +43,7 @@ $$
 
 $$
 s.t.\begin{cases}
-\omega ^ T x_i+b >0,y_i=1 \\[2ex]
+\omega ^ T x_i+b >0,y_i=1 \\
 \omega ^ T x_i+b <0, y_i=-1
 \end{cases}
 $$
